@@ -70,7 +70,7 @@ class LoadFeedLoaderTests: XCTestCase {
         let (sut, client) = makeSUT()
         
         expect(sut, toCompleteWith: .success([]), when: {
-            let data = Data("{\"items\": []}".utf8)
+            let data = makeItemsJSON([])
             client.complete(withStatusCode: 200, data: data)
         })
     }
