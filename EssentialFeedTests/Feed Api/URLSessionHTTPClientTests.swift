@@ -87,7 +87,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         
         func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> HTTPSessionTask {
             guard let stub = stubs[url] else {
-                fatalError("Couldn't find stubb for \(url)")
+                fatalError("Couldn't find stub for \(url)")
             }
             completionHandler(nil, nil, stub.error)
             return stub.task
