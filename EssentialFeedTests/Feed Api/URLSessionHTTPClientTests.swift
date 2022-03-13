@@ -9,9 +9,20 @@ import XCTest
 import EssentialFeed
 
 class URLSessionHTTPClientTests: XCTestCase {
+
+    override func setUp() {
+        super.setUp()
+
+        URLProtocolStub.startInterceptingRequests()
+    }
+
+    override func tearDown() {
+        super.tearDown()
+
+        URLProtocolStub.stopInterceptingRequests()
+    }
     
     func test_getFromURL_performsGETRequestWithURL() {
-        URLProtocolStub.startInterceptingRequests()
         let url = anyURL()
         let exp = expectation(description: "Wait for request")
 
@@ -24,7 +35,6 @@ class URLSessionHTTPClientTests: XCTestCase {
         makeSUT().get(from: url) { _ in }
 
         wait(for: [exp], timeout: 1.0)
-        URLProtocolStub.stopInterceptingRequests()
     }
     
     func test_getFromURL_failsOnRequestError() {
@@ -103,7 +113,6 @@ class URLSessionHTTPClientTests: XCTestCase {
     }
 
     private func resultFor(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #file, line: UInt = #line) -> HTTPClientResult {
-        URLProtocolStub.startInterceptingRequests()
         URLProtocolStub.stub(data: data, response: response, error: error)
         let sut = makeSUT(file: file, line: line)
         let exp = expectation(description: "Wait for completion")
@@ -115,7 +124,6 @@ class URLSessionHTTPClientTests: XCTestCase {
         }
 
         wait(for: [exp], timeout: 1.0)
-        URLProtocolStub.stopInterceptingRequests()
         return receivedResult
     }
     
