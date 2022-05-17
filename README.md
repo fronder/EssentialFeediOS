@@ -55,22 +55,18 @@ Url
 
 ### Primary course (happy path):
 1. Execute “Load Feed Items” command with above data.
-2. System downloads data from the URL.
-3. System validates downloaded data.
-4. System creates image feed from valid data.
+2. System retrieves feed data from cache.
+3. System validates cache is less than seven days old.
+4. System creates image feed from cached data.
 5. System delivers image feed.
 
-Invalid data - error course (sad path):
+### Retrieval error course (sad path):
+1. System deletes cache.
+2. System delivers error.
 
-System delivers invalid data error.
+### Expired cache course (sad path):
+1. System deletes cache.
+2. System delivers no feed images.
 
-No connectivity - error course (sad path):
-
-System delivers connectivity error.
-
-
-Load Feed Fallback (Cache)
-
-Data
-
-Max age
+### Empty cache course (sad path):
+1. System delivers no feed images.
