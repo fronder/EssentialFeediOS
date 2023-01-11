@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		112880CF296E06B200B98464 /* FeedImageViewModel+PrototypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112880CE296E06B200B98464 /* FeedImageViewModel+PrototypeData.swift */; };
+		116AC8FE296F0227006FC178 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AC8FD296F0227006FC178 /* FeedImageCell.swift */; };
 		9F5568DE2966B87C00F9BF37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5568DD2966B87C00F9BF37 /* AppDelegate.swift */; };
 		9F5568E02966B87C00F9BF37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5568DF2966B87C00F9BF37 /* SceneDelegate.swift */; };
 		9F5568E52966B87C00F9BF37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5568E32966B87C00F9BF37 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		112880CE296E06B200B98464 /* FeedImageViewModel+PrototypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageViewModel+PrototypeData.swift"; sourceTree = "<group>"; };
+		116AC8FD296F0227006FC178 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		9F5568DA2966B87C00F9BF37 /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5568DD2966B87C00F9BF37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F5568DF2966B87C00F9BF37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				9F5568E62966B87F00F9BF37 /* Assets.xcassets */,
 				9F5568E82966B87F00F9BF37 /* LaunchScreen.storyboard */,
 				9F5568EB2966B87F00F9BF37 /* Info.plist */,
+				116AC8FD296F0227006FC178 /* FeedImageCell.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				9F5568F22966D93400F9BF37 /* FeedViewController.swift in Sources */,
 				9F5568E02966B87C00F9BF37 /* SceneDelegate.swift in Sources */,
 				112880CF296E06B200B98464 /* FeedImageViewModel+PrototypeData.swift in Sources */,
+				116AC8FE296F0227006FC178 /* FeedImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
