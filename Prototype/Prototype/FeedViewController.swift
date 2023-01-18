@@ -13,7 +13,7 @@ struct FeedImageViewModel {
     let imageName: String
 }
 
-class FeedViewController: UITableViewController {
+final class FeedViewController: UITableViewController {
     private let feed = FeedImageViewModel.prototypeFeed
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
