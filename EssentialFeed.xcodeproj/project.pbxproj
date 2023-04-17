@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		9F29406C27E119B50002076B /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F58F344277BAE26006289BB /* EssentialFeed.framework */; };
 		9F29407327E128F00002076B /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84ACDC27C02EE40019F72D /* XCTestCase+MemoryLeakTracking.swift */; };
 		9F49CA8F29EA0BBC0035028E /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49CA8E29EA0BBC0035028E /* FeedViewControllerTests.swift */; };
+		9F49CA9A29ED58E20035028E /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F58F344277BAE26006289BB /* EssentialFeed.framework */; platformFilter = ios; };
+		9F49CA9B29ED58E20035028E /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F58F344277BAE26006289BB /* EssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F56BCAA28905206005A5AC3 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56BCA928905206005A5AC3 /* FeedStoreSpecs.swift */; };
 		9F56BCAC2890537F005A5AC3 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56BCAB2890537F005A5AC3 /* HTTPClient.swift */; };
 		9F56BCAE28907CF1005A5AC3 /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56BCAD28907CF1005A5AC3 /* XCTestCase+FeedStoreSpecs.swift */; };
@@ -66,6 +68,13 @@
 			remoteGlobalIDString = 9F58F343277BAE25006289BB;
 			remoteInfo = EssentialFeed;
 		};
+		9F49CA9C29ED58E20035028E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F58F33B277BAE25006289BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F58F343277BAE25006289BB;
+			remoteInfo = EssentialFeed;
+		};
 		9F58F34F277BAE26006289BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9F58F33B277BAE25006289BB /* Project object */;
@@ -81,6 +90,20 @@
 			remoteInfo = EssentialFeed;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F49CA9E29ED58E20035028E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F49CA9B29ED58E20035028E /* EssentialFeed.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		114D8D2C2974433E00EDF035 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F49CA9A29ED58E20035028E /* EssentialFeed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +224,13 @@
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
 		};
+		9F49CA9129EAE0950035028E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F56BCB528909511005A5AC3 /* FeedStoreSpecs */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +253,7 @@
 				9F49CA8B29EA0B190035028E /* EssentialFeediOS */,
 				9F49CA8D29EA0B380035028E /* EssentialFeediOSTests */,
 				9F58F345277BAE26006289BB /* Products */,
+				9F49CA9129EAE0950035028E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -389,10 +421,12 @@
 				114D8D282974433E00EDF035 /* Sources */,
 				114D8D292974433E00EDF035 /* Frameworks */,
 				114D8D2A2974433E00EDF035 /* Resources */,
+				9F49CA9E29ED58E20035028E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9F49CA9D29ED58E20035028E /* PBXTargetDependency */,
 			);
 			name = EssentialFeediOS;
 			productName = EssentialFeediOS;
@@ -682,6 +716,12 @@
 			target = 9F58F343277BAE25006289BB /* EssentialFeed */;
 			targetProxy = 9F29406D27E119B50002076B /* PBXContainerItemProxy */;
 		};
+		9F49CA9D29ED58E20035028E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 9F58F343277BAE25006289BB /* EssentialFeed */;
+			targetProxy = 9F49CA9C29ED58E20035028E /* PBXContainerItemProxy */;
+		};
 		9F58F350277BAE26006289BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9F58F343277BAE25006289BB /* EssentialFeed */;
@@ -710,7 +750,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -721,6 +761,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -742,7 +783,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -753,6 +794,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -769,7 +811,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X3Y36NHRVR;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -795,7 +837,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X3Y36NHRVR;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
