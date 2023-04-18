@@ -27,6 +27,7 @@
 		9F58F361277BB0D8006289BB /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58F360277BB0D8006289BB /* FeedLoader.swift */; };
 		9F58F3672780F06B006289BB /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58F3662780F06B006289BB /* RemoteFeedLoader.swift */; };
 		9F649FA129ED6B3A00D9EEC6 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84ACDC27C02EE40019F72D /* XCTestCase+MemoryLeakTracking.swift */; };
+		9F649FA329EE9C6D00D9EEC6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F649FA229EE9C6D00D9EEC6 /* FeedViewController.swift */; };
 		9F74738D27A499080075DF72 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F74738C27A499080075DF72 /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		9F7D168628493D200033733E /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D168528493D200033733E /* ValidateFeedCacheUseCaseTests.swift */; };
 		9F7D16882849F7B50033733E /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D16872849F7B50033733E /* FeedCacheTestHelpers.swift */; };
@@ -127,6 +128,7 @@
 		9F58F35E277BAE51006289BB /* FeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImage.swift; sourceTree = "<group>"; };
 		9F58F360277BB0D8006289BB /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		9F58F3662780F06B006289BB /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		9F649FA229EE9C6D00D9EEC6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9F74738C27A499080075DF72 /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		9F7D168528493D200033733E /* ValidateFeedCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		9F7D16872849F7B50033733E /* FeedCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCacheTestHelpers.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		9F49CA8B29EA0B190035028E /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				9F649FA229EE9C6D00D9EEC6 /* FeedViewController.swift */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				TargetAttributes = {
 					114D8D2B2974433E00EDF035 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1340;
 					};
 					114D8D322974433E00EDF035 = {
 						CreatedOnToolsVersion = 14.1;
@@ -628,6 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F649FA329EE9C6D00D9EEC6 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +746,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -765,6 +771,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -774,6 +781,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -807,6 +815,7 @@
 		114D8D3F2974433F00EDF035 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -833,6 +842,7 @@
 		114D8D402974433F00EDF035 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
