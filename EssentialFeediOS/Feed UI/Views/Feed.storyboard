@@ -79,6 +79,9 @@ Location</string>
                                                                 <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
                                                                 <color key="baseForegroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="wDT-w0-GWn" eventType="touchUpInside" id="kKB-26-p2u"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,6 +123,14 @@ Location</string>
                                         <constraint firstAttribute="trailing" secondItem="n9C-VU-aAR" secondAttribute="trailing" constant="8" id="hGq-ad-cfz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="WkE-ae-uh2" id="dDw-7X-vOp"/>
+                                    <outlet property="feedImageContainer" destination="R0e-n3-qTL" id="vw1-Dx-Dmx"/>
+                                    <outlet property="feedImageRetryButton" destination="eUI-3o-SR5" id="Mg0-lM-Ex1"/>
+                                    <outlet property="feedImageView" destination="ACB-Xf-T33" id="GuJ-Y9-XIp"/>
+                                    <outlet property="locationContainer" destination="Wo7-pW-54r" id="5yp-od-ZDi"/>
+                                    <outlet property="locationLabel" destination="3yf-FH-KjU" id="Utd-sx-Xjx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -138,7 +149,7 @@ Location</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2c-XY-x93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="86"/>
+            <point key="canvasLocation" x="-272" y="63"/>
         </scene>
     </scenes>
     <resources>
