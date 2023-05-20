@@ -46,6 +46,7 @@
 		9FA21C5928F40CE500240682 /* EssentialFeedCacheIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA21C5828F40CE500240682 /* EssentialFeedCacheIntegrationTests.swift */; };
 		9FA21C5A28F40CE500240682 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F58F344277BAE26006289BB /* EssentialFeed.framework */; };
 		9FA21C6028F4124400240682 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84ACDC27C02EE40019F72D /* XCTestCase+MemoryLeakTracking.swift */; };
+		9FB5E7382A180E9800B5C695 /* FeedViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5E7372A180E9800B5C695 /* FeedViewController+TestHelpers.swift */; };
 		9FC3B2EC29FD2FD400A02959 /* FeedImageDataLoaderTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B2EB29FD2FD400A02959 /* FeedImageDataLoaderTask.swift */; };
 		9FC3B2F029FD520900A02959 /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B2EF29FD520900A02959 /* FeedImageCellController.swift */; };
 		9FC3B2F329FE015D00A02959 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B2F229FE015D00A02959 /* FeedUIComposer.swift */; };
@@ -173,6 +174,7 @@
 		9FA21C4F28EC4FE900240682 /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
 		9FA21C5628F40CE500240682 /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA21C5828F40CE500240682 /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
+		9FB5E7372A180E9800B5C695 /* FeedViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+TestHelpers.swift"; sourceTree = "<group>"; };
 		9FC3B2EB29FD2FD400A02959 /* FeedImageDataLoaderTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderTask.swift; sourceTree = "<group>"; };
 		9FC3B2EF29FD520900A02959 /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 		9FC3B2F229FE015D00A02959 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
@@ -520,6 +522,7 @@
 				9FC3B3192A07EABB00A02959 /* UIControl+TestHelpers.swift */,
 				9FC3B31B2A07EACD00A02959 /* UIImage+TestHelpers.swift */,
 				9FC3B31D2A07EADC00A02959 /* UIRefreshControl+TestHelpers.swift */,
+				9FB5E7372A180E9800B5C695 /* FeedViewController+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -703,7 +706,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					114D8D2B2974433E00EDF035 = {
 						CreatedOnToolsVersion = 14.1;
@@ -835,6 +838,7 @@
 				9FC3B31E2A07EADC00A02959 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				9FC3B3162A07EA6600A02959 /* FeedUIIntegrationTests+Assertions.swift in Sources */,
 				9FC3B3262A0804E700A02959 /* FeedLocalizationTests.swift in Sources */,
+				9FB5E7382A180E9800B5C695 /* FeedViewController+TestHelpers.swift in Sources */,
 				9FC3B31C2A07EACD00A02959 /* UIImage+TestHelpers.swift in Sources */,
 				9F49CA8F29EA0BBC0035028E /* FeedUIIntegrationTests.swift in Sources */,
 				9FC3B31A2A07EABB00A02959 /* UIControl+TestHelpers.swift in Sources */,
@@ -960,7 +964,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -971,7 +975,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -995,7 +999,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1006,7 +1010,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1035,7 +1039,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X3Y36NHRVR;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1062,7 +1066,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X3Y36NHRVR;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1085,6 +1089,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MARKETING_VERSION = 1.0;
@@ -1102,6 +1107,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MARKETING_VERSION = 1.0;
@@ -1149,6 +1155,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1214,6 +1221,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1242,6 +1250,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1268,6 +1277,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1293,6 +1303,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = EssentialFeedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1312,6 +1323,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = EssentialFeedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1331,6 +1343,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
@@ -1348,6 +1361,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
